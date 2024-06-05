@@ -8,6 +8,16 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
-  modules: ["@nuxt/fonts"]
+  modules: ["@nuxt/fonts", "@nuxtjs/i18n"],
+  i18n: {
+    vueI18n: './i18n.config.ts',
+    locales: [
+      {code: "en", iso: "en-US", file: "en.ts"}, 
+      {code: "es", iso: "es-ES", file: "es.ts"}
+    ],
+    defaultLocale: "es",
+    strategy: "prefix",
+    langDir: "i18n",
+    lazy: true
+  }
 })
