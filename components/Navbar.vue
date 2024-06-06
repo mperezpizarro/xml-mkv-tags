@@ -53,7 +53,7 @@ function toggleSelector() {
                 </button>
                 <!-- Dropdown -->
                 <div style="position: absolute; inset: 60px auto auto auto; margin: 0px;" :class="isLangHidden ? 'hidden' : ''" class="z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-fit" id="language-dropdown-menu">
-                    <LangSelector />
+                    <LangSelector @click="toggleSelector" />
                 </div>
                 <button @click="toggleMenu" data-collapse-toggle="navbar-language" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
