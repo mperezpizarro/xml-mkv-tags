@@ -1,6 +1,7 @@
 <script setup>
 const isHidden = ref(true)
 const isLangHidden = ref(true)
+const { locale, setLocale } = useI18n()
 
 function toggleMenu() {
     isHidden.value = !isHidden.value
@@ -10,8 +11,6 @@ function toggleSelector() {
 }
 </script>
 <template>
-
-
     <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
@@ -21,35 +20,10 @@ function toggleSelector() {
             <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                 <button @click="toggleSelector" type="button" data-dropdown-toggle="language-dropdown-menu"
                     class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
-                    <svg class="w-5 h-5 rounded-full me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3900 3900">
-                        <path fill="#b22234" d="M0 0h7410v3900H0z" />
-                        <path d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0" stroke="#fff"
-                            stroke-width="300" />
-                        <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
-                        <g fill="#fff">
-                            <g id="d">
-                                <g id="c">
-                                    <g id="e">
-                                        <g id="b">
-                                            <path id="a"
-                                                d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z" />
-                                            <use xlink:href="#a" y="420" />
-                                            <use xlink:href="#a" y="840" />
-                                            <use xlink:href="#a" y="1260" />
-                                        </g>
-                                        <use xlink:href="#a" y="1680" />
-                                    </g>
-                                    <use xlink:href="#b" x="247" y="210" />
-                                </g>
-                                <use xlink:href="#c" x="494" />
-                            </g>
-                            <use xlink:href="#d" x="988" />
-                            <use xlink:href="#c" x="1976" />
-                            <use xlink:href="#e" x="2470" />
-                        </g>
-                    </svg>
-                    English (US)
+                    <IconsUSFlag v-if="locale === 'en'" />
+                    <IconsSpainFlag v-if="locale === 'es'" />
+                    <span class="pl-2 inline-block" v-if="locale === 'en'">English (US)</span>
+                    <span class="pl-2 inline-block" v-if="locale === 'es'">Español (España)</span>
                 </button>
                 <!-- Dropdown -->
                 <div style="position: absolute; inset: 60px auto auto auto; margin: 0px;" :class="isLangHidden ? 'hidden' : ''" class="z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-fit" id="language-dropdown-menu">
