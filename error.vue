@@ -11,7 +11,7 @@ const handleError = () => clearError({ redirect: '/' })
         <Title>{{`${error.statusCode} - MKV XML Tags Generator`}}</Title>
     </Head>
     <Navbar />
-    <main class="w-full max-w-[90ch] mx-auto p-4 min-h-[calc(100vh-76px-72px)] flex flex-col items-center justify-center">
+    <main class="w-full mx-auto p-4 min-h-[calc(100vh-76px-72px)] flex flex-col items-center justify-center">
         <h2 class="text-4xl font-bold uppercase text-center">{{`Error ${error.statusCode}`}}</h2>
         <PrimaryButton class="mt-8" type="submit" text="Return to home page" @click="handleError" />
     </main>

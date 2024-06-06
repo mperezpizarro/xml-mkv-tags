@@ -2,10 +2,10 @@
     <Head>
         <Title>About - MKV XML Tags Generator</Title>
     </Head>
-    <header class="w-full max-w-[80ch] mx-auto">
+    <header class="w-full mx-auto">
         <h2 class="text-2xl uppercase mb-8">About</h2>
     </header>
-    <article class="w-full max-w-[80ch] mx-auto">
+    <article class="w-full mx-auto">
         <p class="text-lg mb-6">
             This website helps you create metadata tags for your Matroska video files.
             It is orientated to movies and TV episodes so it includes fields like the actors, the directors, the title of the movie/episode, the plot...
@@ -17,10 +17,10 @@
             You can use a software like <a href="https://mkvtoolnix.download/" target="_blank">MKVToolnix</a> to add your generated XML to the Matroska file you want.
         </p>
     </article>
-    <header class="w-full max-w-[80ch] mx-auto mt-12">
+    <header class="w-full mx-auto mt-12">
         <h2 class="text-2xl uppercase mb-8">Using MKVToolnix to add my XML file</h2>
     </header>
-    <article class="w-full max-w-[80ch] mx-auto">
+    <article class="w-full mx-auto">
         <p class="text-lg mb-6">
             With the program opened, click into the "Add files" button and select your desired files. You can also drag and drop the files you want into the program.
         </p>
