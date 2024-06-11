@@ -1,10 +1,10 @@
 export default {
-    "aboutHeading1": "About",
-    "aboutHeading2": "Using MKVToolnix to add my XML file",
-    "aboutP1": "This website helps you create metadata tags for your Matroska video files. It is orientated to movies and TV episodes so it includes fields like the actors, the directors, the title of the movie/episode, the plot...",
-    "aboutP2": "Once you have filled all the required fields and the optional ones you want, you will be able to download an XML file to add to your .mkv video.",
-    "aboutP3": "You can use a software like {softwareName} to add your generated XML to the Matroska file you want.",
-    "aboutP4": 'With the program opened, click into the "Add files" button and select your desired files. You can also drag and drop the files you want into the program.',
-    "aboutP5": 'Once you have finished your Matroska file, go to the "Output" tab and click the button in the "Add metatags" option to add your previously generated XML file.',
-    "aboutP6": "Now you have and MKV file with your desired metadata."
+    "aboutHeading1": "Sobre la web",
+    "aboutHeading2": "Usar MKVToolnix para vincular mi archivo XML",
+    "aboutP1": "Este sitio web te permite generar etiquetas de metadatos para tus archivos de vídeo MKV. Está pensado para películas y episodios de TV, por lo que incluye campos como los actores, los directores, el título de la película o episodio, la trama, etc.",
+    "aboutP2": "Una vez rellenos los campos del formulario, podrás descargar un archivo XML con los metadatos para añadir a tu .mkv.",
+    "aboutP3": "Puedes usar un programa como {softwareName} para añadir el XML generado al archivo MKV que quieras.",
+    "aboutP4": 'Con el programa abierto, haz clic en el botón "Añadir archivos" y selecciona los archivos que quieras. También puedes arrastrar los ficheros al programa.',
+    "aboutP5": 'Una vez tengas preparado tu archivo, ve a la pestaña "Salida" haz clic en el botón de la opción "Añadir etiquetas" para agregar tu archivo XML previamente generado.',
+    "aboutP6": "Ya tienes tu vídeo MKV con los metadatos que querías."
 }
