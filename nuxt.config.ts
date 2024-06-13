@@ -8,7 +8,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@nuxt/fonts", "@nuxtjs/i18n"],
+  modules: ["@nuxt/fonts", "@nuxtjs/i18n", "nuxt-snackbar"],
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [
@@ -27,5 +27,10 @@ export default defineNuxtConfig({
     strategy: "prefix",
     langDir: "i18n",
     lazy: true
+  },
+  snackbar: {
+    bottom: true,
+    right: true,
+    duration: 5000
   }
 })
