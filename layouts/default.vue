@@ -7,6 +7,7 @@
     <Navbar />
     <main class="max-w-[80ch] mx-auto p-4">
         <slot />
+        <NuxtSnackbar />
     </main>
     <Footer />
 </template>
