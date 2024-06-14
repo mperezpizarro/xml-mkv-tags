@@ -1,3 +1,13 @@
+<script setup>
+const { locale, setLocale } = useI18n()
+
+useHead({
+    htmlAttrs: {
+        lang: locale
+    }
+})
+</script>
+
 <template>
     <Head>
         <Title>MKV XML Tags generator - Generate XML metadata files for your MKV video</Title>
