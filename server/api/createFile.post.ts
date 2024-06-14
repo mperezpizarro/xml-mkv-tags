@@ -24,45 +24,21 @@ export default defineEventHandler(async (event) => {
         })
     }
 
-    let xmlDoc = 
-    `
-    <Simple>
-      <Name>TITLE</Name>
-      <String>${body.title}</String>
-    </Simple>
-    `
+    let xmlDoc = '\n\t\t\t<Simple>\n\t\t\t\t<Name>TITLE</Name>\n\t\t\t\t<String>' + body.title + '</String>\n\t\t\t</Simple>'
 
     if (body.dateReleased !== '') {
-        xmlDoc = xmlDoc + 
-        `
-        <Simple>
-            <Name>DATE_RELEASED</Name>
-            <String>${body.dateReleased}</String>
-        </Simple>
-        `
+        xmlDoc = xmlDoc + '\n\t\t\t<Simple>\n\t\t\t\t<Name>DATE_RELEASED</Name>\n\t\t\t\t<String>' + body.dateReleased + '</String>\n\t\t\t</Simple>'
     }
 
     if (body.summary !== '') {
-        xmlDoc = xmlDoc + 
-        `
-        <Simple>
-            <Name>SUMMARY</Name>
-            <String>${body.summary}</String>
-        </Simple>
-        `
+        xmlDoc = xmlDoc + '\n\t\t\t<Simple>\n\t\t\t\t<Name>SUMMARY</Name>\n\t\t\t\t<String>' + body.summary + '</String>\n\t\t\t</Simple>'
     }
 
     if (body.actor !== '') {
         const actors = splitData(body.actor!)
 
         actors.map((actor) => {
-            xmlDoc = xmlDoc +
-            `
-            <Simple>
-                <Name>ACTOR</Name>
-                <String>${actor}</String>
-            </Simple>
-            `
+            xmlDoc = xmlDoc + '\n\t\t\t<Simple>\n\t\t\t\t<Name>ACTOR</Name>\n\t\t\t\t<String>' + actor.trim() + '</String>\n\t\t\t</Simple>'
         } )
     }
 
@@ -70,13 +46,7 @@ export default defineEventHandler(async (event) => {
         const directors = splitData(body.director!)
 
         directors.map((director) => {
-            xmlDoc = xmlDoc +
-            `
-            <Simple>
-                <Name>DIRECTOR</Name>
-                <String>${director}</String>
-            </Simple>
-            `
+            xmlDoc = xmlDoc + '\n\t\t\t<Simple>\n\t\t\t\t<Name>DIRECTOR</Name>\n\t\t\t\t<String>' + director.trim() + '</String>\n\t\t\t</Simple>'
         } )
     }
 
@@ -84,11 +54,3 @@ export default defineEventHandler(async (event) => {
 
     return completeDoc
 })
-
-/**
- * { title: 'Awita',
-  dateReleased: '2000-04-12',
-  actor: 'Maripili Lozano, Caraculo Salas',
-  director: 'Bívido López',
-  summary: 'Me gusta el awita fresquita.' }
- */
