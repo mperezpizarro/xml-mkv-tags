@@ -48,12 +48,12 @@ async function handleSubmit(e) {
                 :placeholder="$t('homeInputPlaceholder4')" />
         </FormCol>
         <FormCol>
-            <button type="submit"
-                class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">{{
-        $t('homeSubmit') }}</button>
-            <a v-if="!hiddenURL" download="metadata.xml" :href="fileURL"
-                class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Descargar
-                archivo</a>
+            <button type="submit" class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                {{ $t('homeSubmit') }}
+            </button>
+            <a v-if="!hiddenURL" download="metadata.xml" :href="fileURL" class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+                {{ $t('homeDownload') }}
+            </a>
         </FormCol>
     </form>
 </template>
