@@ -6,6 +6,7 @@ const formData = reactive({
     director: "",
     summary: ""
 })
+const xmlData = ref ('')
 const fileURL = ref('#')
 const hiddenURL = ref(true)
 
@@ -16,7 +17,7 @@ async function handleSubmit(e) {
         method: 'post',
         body: parsedFormData
     })
-    console.log(data)
+    xmlData.value = data
 
     const file = new Blob([data], {
         type: "text/xml"
@@ -54,6 +55,9 @@ async function handleSubmit(e) {
             <a v-if="!hiddenURL" download="metadata.xml" :href="fileURL" class="mt-8 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
                 {{ $t('homeDownload') }}
             </a>
+        </FormCol>
+        <FormCol>
+            <TextArea name="RESULT" disabled v-model="xmlData" rows="18" resize="none"  />
         </FormCol>
     </form>
 </template>

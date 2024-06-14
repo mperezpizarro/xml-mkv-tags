@@ -3,7 +3,7 @@
         <Title>About - MKV XML Tags Generator</Title>
     </Head>
     <header class="w-full mx-auto">
-        <h2 class="text-2xl uppercase mb-8">{{ $t('aboutHeading1') }}</h2>
+        <h2 class="text-balance text-xl md:text-2xl uppercase mb-8">{{ $t('aboutHeading1') }}</h2>
     </header>
     <article class="w-full mx-auto">
         <Paragraph>
@@ -21,7 +21,7 @@
         </Paragraph>
     </article>
     <header class="w-full mx-auto mt-12">
-        <h2 class="text-2xl uppercase mb-8">{{ $t('aboutHeading2') }}</h2>
+        <h2 class="text-balance text-xl md:text-2xl uppercase mb-8">{{ $t('aboutHeading2') }}</h2>
     </header>
     <article class="w-full mx-auto">
         <Paragraph>

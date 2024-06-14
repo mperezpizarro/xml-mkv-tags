@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full grid grid-cols-1 gap-x-4 md:grid-cols-2 mb-4">
+    <div class="w-full flex flex-col gap-4 md:grid md:grid-cols-2 mb-4">
         <slot />
     </div>
 </template>

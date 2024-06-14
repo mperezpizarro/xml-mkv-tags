@@ -14,16 +14,16 @@ function toggleSelector() {
     <nav class="bg-white border-gray-200">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="/public/favicon.svg" class="h-8" alt="Site Logo" />
-                <h1 class="self-center text-xl font-semibold whitespace-nowrap">MKV Tags generator</h1>
+                <img src="/public/favicon.svg" class="h-4 md:h-8" alt="Site Logo" />
+                <h1 class="self-center text-sm md:text-xl font-semibold whitespace-nowrap">MKV Tags generator</h1>
             </a>
             <div class="flex items-center md:order-2 space-x-1 md:space-x-0 rtl:space-x-reverse">
                 <button @click="toggleSelector" type="button" data-dropdown-toggle="language-dropdown-menu"
                     class="inline-flex items-center font-medium justify-center px-4 py-2 text-sm text-gray-900 rounded-lg cursor-pointer hover:bg-gray-100">
                     <IconsUSFlag v-if="locale === 'en'" />
                     <IconsSpainFlag v-if="locale === 'es'" />
-                    <span class="pl-2 inline-block" v-if="locale === 'en'">English (US)</span>
-                    <span class="pl-2 inline-block" v-if="locale === 'es'">Español (España)</span>
+                    <span class="pl-2 text-sm inline-block md:text-base" v-if="locale === 'en'">English</span>
+                    <span class="pl-2 text-sm inline-block md:text-base" v-if="locale === 'es'">Español</span>
                 </button>
                 <!-- Dropdown -->
                 <div style="position: absolute; inset: 60px auto auto auto; margin: 0px;" :class="isLangHidden ? 'hidden' : ''" class="z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-fit" id="language-dropdown-menu">
@@ -42,9 +42,9 @@ function toggleSelector() {
             </div>
             <div :class="isHidden ? 'hidden' : ''" class="items-center justify-between w-full md:flex md:w-auto md:order-1" id="navbar-language">
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-                    <NavLink href="/" :label="$t('homeLink')" />
-                    <NavLink href="/about" :label="$t('aboutLink')" />
-                    <NavLink href="https://github.com" target="_blank" :label="$t('githubLink')" />
+                    <NavLink @click="toggleMenu" href="/" :label="$t('homeLink')" />
+                    <NavLink @click="toggleMenu" href="/about" :label="$t('aboutLink')" />
+                    <NavLink @click="toggleMenu" href="https://github.com/mperezpizarro/xml-mkv-tags" target="_blank" :label="$t('githubLink')" />
                 </ul>
             </div>
         </div>
