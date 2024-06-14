@@ -11,5 +11,6 @@ export default {
     "homeInputPlaceholder2": "John Doe, Jane Smith",
     "homeInputPlaceholder3": "John Doe",
     "homeInputPlaceholder4": "Resumen la trama de la película o el episodio...",
-    "homeSubmit": "Enviar"
+    "homeSubmit": "Enviar",
+    "homeDownload": "Descargar archivo"
 }

@@ -11,5 +11,6 @@ export default {
     "homeInputPlaceholder2": "John Doe, Jane Smith",
     "homeInputPlaceholder3": "John Doe",
     "homeInputPlaceholder4": "Sumarize the plot of the movie or the episode here...",
-    "homeSubmit": "Submit"
+    "homeSubmit": "Submit",
+    "homeDownload": "Download file"
 }
