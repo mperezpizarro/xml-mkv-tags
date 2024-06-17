@@ -15,12 +15,12 @@ export default defineNuxtConfig({
       {
         code: "en",
         iso: "en-US",
-        files: ["links.en.ts", "about.en.ts", "home.en.ts"]
+        files: ["links.en.ts", "about.en.ts", "home.en.ts", "imgs.en.ts"]
       }, 
       {
         code: "es",
         iso: "es-ES",
-        files: ["links.es.ts", "about.es.ts", "home.es.ts"]
+        files: ["links.es.ts", "about.es.ts", "home.es.ts", "imgs.es.ts"]
       }
     ],
     defaultLocale: "es",

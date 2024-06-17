@@ -1,3 +1,7 @@
+<script setup>
+const { locale, setLocale } = useI18n()
+</script>
+
 <template>
     <Head>
         <Title>About - MKV XML Tags Generator</Title>
@@ -27,11 +31,17 @@
         <Paragraph>
             {{ $t('aboutP4') }}
         </Paragraph>
+        <img v-if="locale === 'en'" src="/images/tutorial-en-1.webp" :alt="$t('aboutImg1Alt')" class="w-full mt-4 mb-6" />
+        <img v-if="locale === 'es'" src="/images/tutorial-es-1.webp" :alt="$t('aboutImg1Alt')" class="w-full mt-4 mb-6" />
         <Paragraph>
             {{ $t('aboutP5') }}
         </Paragraph>
+        <img v-if="locale === 'en'" src="/images/tutorial-en-2.webp" :alt="$t('aboutImg2Alt')" class="w-full mt-4 mb-6" />
+        <img v-if="locale === 'es'" src="/images/tutorial-es-2.webp" :alt="$t('aboutImg2Alt')" class="w-full mt-4 mb-6" />
         <Paragraph>
             {{ $t('aboutP6') }}
         </Paragraph>
+        <img v-if="locale === 'en'" src="/images/tutorial-en-3.webp" :alt="$t('aboutImg3Alt')" class="w-full mt-4 mb-6" />
+        <img v-if="locale === 'es'" src="/images/tutorial-es-3.webp" :alt="$t('aboutImg3Alt')" class="w-full mt-4 mb-6" />
     </article>
 </template>
